@@ -1,0 +1,94 @@
+<%= form_for(@report, html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @report.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@report.errors.count, "error") %> prohibited this report from being saved:</h4>
+
+      <ul>
+      <% @report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :entity, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :entity, class: "form-control", placeholder: "Who was the culprit?" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :locations, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.select :locations, options_for_select(INDO_PROVINCES, @report.locations),{}, {class: "form-control"} %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :reason, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :reason, class: "form-control", placeholder: "Why did it happen? What was the reason?" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :date_of_incident, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :date_of_incident, class: "form-control datepicker", placeholder: "When did it happen?" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cost, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :cost, class: "form-control", placeholder: "How much money was involved?" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :title, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :title, class: "form-control", placeholder: "Title for this case" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :description, class: "form-control", placeholder: "Explain, in detail, what happened." %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
+
+<script>
+  
+  
+  var entities = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  local: <%= raw Entity.all.map {|e| {name: e.name}}.to_json %>
+});
+
+// initialize the bloodhound suggestion engine
+entities.initialize();
+
+// instantiate the typeahead UI
+$('#report_entity').typeahead(null, {
+  displayKey: 'name',
+  source: entities.ttAdapter()
+});
+
+$('#report_locations').select2({
+  theme: 'bootstrap',
+  placeholder: 'Where did this happen?'
+})
+
+
+$('.datepicker').datepicker({
+  format: 'yyyy/mm/dd'
+});
+  
+
+  
+</script>

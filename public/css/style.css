@@ -1,0 +1,4384 @@
+html {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.load-video {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left:30px;
+  bottom:35px;
+
+  background-size:contain;
+  -webkit-animation: 0.7s spin infinite;
+          animation: 0.7s spin infinite;
+}
+.load-video::before, .load-video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-animation: .35s infinite alternate linear;
+          animation: .35s infinite alternate linear;
+}
+.load-video::before {
+ 
+  background-size:contain;
+  -webkit-animation-name: blur1;
+          animation-name: blur1;
+}
+.load-video::after {
+ 
+  background-size:contain;
+  -webkit-animation-name: blur2;
+          animation-name: blur2;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes blur1 {
+  to {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+@keyframes blur1 {
+  to {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+@-webkit-keyframes blur2 {
+  to {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+}
+@keyframes blur2 {
+  to {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+}
+
+.logo-wrapper {
+    position: absolute;
+    width:100%;
+    height:100%;
+    text-align: center;
+}
+
+#canvas {
+    position: relative;
+     top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    width:75% !important;
+    max-width: 600px;
+    margin:auto !important;
+    background-color: transparent !important;
+}
+
+
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+body {
+    font-size:1em; margin:0px; font-family:"batfont", 'Andale Mono', monospace; font-weight:normal; font-style:normal; -webkit-font-smoothing: antialiased;
+    overflow-y:hidden; background-color:#000; -moz-osx-font-smoothing: grayscale; overflow-y: auto;
+}
+
+body.black
+{
+    background-color: black;
+
+}
+
+a {text-decoration: none; color: #FFF;}
+
+
+h3 {
+    margin:0 0 16px 0;
+}
+
+p {
+    margin:0px;
+}
+
+
+
+.ie-text {
+    text-decoration: line-through;
+    cursor: pointer;
+    display:none;
+}
+
+.ie #toggle-menu, .ie .nav-right, .ie .desktop-text, .ie .small-nav{
+    display:none !important;
+}
+
+.ie .ie-text {
+    display:inline-block !important;
+}
+
+.video-content video {
+    background: #f6f6f6 !important;
+}
+
+.del video {
+    background: #000 !important;
+}
+
+
+.load-off {
+    opacity:0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+#preload-loader {
+    position: fixed;
+    top:200%;
+    right:200%;
+}
+
+#overlay {
+    width:102%;
+    top:-1px;
+    left:-1px;
+
+}
+
+ #margin {
+        background-color: #FFF;
+        height:70px;
+        width:100%;
+        position:fixed;
+        z-index:999;
+        top:0;
+    }
+
+
+
+video { background:#000 !important;}
+
+.universal_video_backgroundBorder {background:#000 !important;}
+
+
+ .bat-load {
+        width: 60px;
+        height: 43px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-left:-30px;
+        margin-top:-22px;
+        animation: play 1s steps(16) infinite;     
+    }
+    
+    @keyframes play {
+        100% { background-position: -960px; }
+    }
+
+/* FIX */
+
+.royal_preloader {
+    position: fixed;
+    width:100%;
+    height:100%;
+}
+
+#overlay img {
+    display: block !important;
+}
+
+
+.small-nav-information {
+    background-color: #FFF;
+    color:#ff0017;
+}
+
+.small-nav-information:hover {
+    text-decoration: none !important;
+}
+
+#pyramid {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    display:none;
+    background: #f80015;
+}
+
+.object-wrapper {
+    position: absolute;
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+.object-container {
+    position: relative;
+    width:100%;
+    height:100%;
+}
+
+.object-container object {
+    width:100%;
+    height:100%;
+    position:absolute;
+}
+
+.video-content img {
+    display:none;
+    width:100%;
+    height:100%;
+}
+
+.universal_video_background.thumbs .thumbsHolderWrapper {
+    display:none !important;
+}
+
+.grid--item.-large {
+    display:none !important;
+}
+
+#social-tumblr {
+    text-align: left;
+    width:15%;
+}
+
+.desktop-text {
+    text-decoration: line-through;
+    cursor: pointer;
+    display:inline-block;
+}
+
+#social-soundcloud {
+    text-align: center;
+    width:25%;
+}
+
+.hidden-text {
+    opacity:0 !important;
+}
+
+.phhhoto-cover {
+    position:absolute;
+    bottom:0px;
+    background: #FFF;
+    height:60px;
+    width:100%;
+}
+
+#logo-white {z-index: 1000; position: absolute; display:none;}
+
+
+
+.black {
+    background-color: #000 !important;
+}
+
+#social-phhhoto {
+    cursor:pointer;
+}
+
+#grid {
+	background-color: #FFF;
+    margin-top: 70px;
+}
+
+body.black #frame-holder {
+    background-color: #000 !important;
+}
+
+#frame-holder, #frame-holder-grid {
+    display:none;
+    position:absolute; 
+    height:100%;
+    width:100%;
+    top:0px !important;
+
+}
+
+.bat-load {
+    display: none;
+}
+
+.bottom {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	margin:0px;
+	padding:0px;
+}
+
+.small-nav {
+    display:none;
+    width:100%;
+    position:absolute;
+    height:30px;
+    top:50%;
+    margin-top: 10px !important;
+    box-sizing: border-box;
+
+
+}
+
+.small-nav li {
+    float:left;
+    width:33.33333%;
+    height:30px;
+    border:1px solid #FFF;
+    text-align: center;
+    line-height: 30px;
+    display:block;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.information-about ul li:first-child {
+        border-right: none !important;
+    }
+
+    .information-about ul li:last-child {
+        border-left: none !important;
+    }
+
+#nav-trans {
+    background-color: #000 !important;
+    opacity:0.4 !important;
+    width:100%;
+    height:100%;
+    position:absolute;
+    display:none;
+}
+
+#about-portfolio {
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.phone {
+    float:right;
+    margin:0px;
+}
+
+.email {
+    margin-left: 0px;
+    float:left;
+}
+
+.half-contact {display:none; width:100%;}
+.half-contact span {float:right;}
+
+.small-contact {display:none; width:100%;}
+
+.half-contact li {
+	float:left;
+	width:20%;
+}
+
+
+.setAsBg {
+    opacity:0;
+
+	-webkit-transition: all 5s;
+	-moz-transition: all 5s;
+	-o-transition: all 5s;
+	transition: all 5s;
+}
+
+
+#nav {
+    text-align: justify;
+	text-transform: uppercase;
+	font-size: 10px;
+	line-height:12px;
+	color:#FFF;	
+    top:0px;
+    opacity:0;
+    background-color:#000;
+    
+
+
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index:9990;
+	
+	background-size:cover;
+
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+
+
+	
+
+}
+
+#content-holder {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+    padding-top: 70px;
+	background: #FFF;
+	border: 0px !important;
+    display:none;
+}
+	
+#nav h1 {
+	width:600px;
+	margin:0 auto;
+	text-align:center;
+	color:#FFF;
+}
+
+
+.information {
+	position:absolute;
+	width:100%;
+	height:230px;
+	overflow:hidden;
+	top:50%;
+	margin-top:-115px;
+	line-height: 16px;
+}
+
+.information-content {
+	width:900px;
+	height:100%;
+	margin:0 auto;
+	padding:0 150px;
+
+	-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+
+.information-expertise {
+	width:27%;
+	float:left;
+	position:relative;
+	height:100%;
+
+	-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+
+}
+
+.information-expertise ul li:hover {
+	text-decoration: none !important;
+}
+
+.information-social {
+	width:12%;
+	float:right;
+	position:relative;
+	height:100%;
+
+	-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+
+
+}
+
+.information-about {
+	width:450px;
+	float:left;
+	margin-right: 70px;
+	position:relative;
+	height:100%;
+}
+
+.information ul {
+	margin:0px;
+}
+
+.mask {
+    width: 100%;
+    height:100%;
+    z-index:2;
+    background-repeat: repeat-y;
+    background-size: contain;
+    position:absolute;
+}
+
+
+.copy {
+	width:80px;
+	height:30px;
+	display:block;
+	position:absolute;
+	bottom:120px;
+	right:-20px;
+	text-align: right;
+	font-size: 11px;
+
+	-moz-transform-origin: 0% 100%;
+	-ms-transform-origin: 0% 100%;
+	-o-transform-origin: 0% 100%;
+	-webkit-transform-origin: 0% 100%;
+	transform-origin: 0% 100%;
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.sydney{
+    width:400px;
+    height:30px;
+    display:block;
+    position:absolute;
+    bottom:50%;
+    right:-160px;
+    text-align: center;
+    line-height:30px;
+    font-size: 12px;
+    z-index: 99;
+
+    
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+.newyork {
+    width:400px;
+    height:30px;
+    display:block;
+    position:absolute;
+    bottom:50%;
+    left:-160px;
+    text-align: center;
+    line-height:30px;
+    font-size: 12px;
+    z-index: 99;
+
+    
+    
+
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+
+.contact{
+    width:400px;
+    height:30px;
+    display:block;
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    margin-left: -200px;
+    text-align: center;
+    line-height:30px;
+    font-size: 12px;
+    z-index: 99;
+}
+
+
+.mainnav {
+	width:100%;
+	text-align: center;
+	padding:0px !important;
+	font-size: 60px;
+	line-height: 60px;
+	letter-spacing: -1px;
+	position: absolute;
+	top:50%;
+}
+
+
+.subnav {
+	font-weight: normal;
+	display:block;
+	width:400px;
+}
+
+.subnav li {
+	float:left !important;
+	cursor: pointer;
+}
+
+.nav-right {
+	position: absolute;
+	right:20px;
+	bottom:0px;
+	height:340px;
+	top:50%;
+	margin-top:-153px;
+	width:30px;
+}
+
+#nav .container {
+	width:300px;
+	height:30px;
+	overflow:hidden;
+	font-size: 11px;
+	line-height: 12px;
+
+	display: block;
+	-moz-transform-origin: 0% 100%;
+	-ms-transform-origin: 0% 100%;
+	-o-transform-origin: 0% 100%;
+	-webkit-transform-origin: 0% 100%;
+	transform-origin: 0% 100%;
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+#nav ul {
+	list-style: none;
+	padding:0px;
+	margin:0px;
+	
+}
+
+#nav ul span {
+	font-size: 14px;
+	padding-top: 8px;
+}
+
+#nav .container ul li {
+	float:right;
+	padding:10px;
+	display:block;
+}
+
+#nav ul li:hover {
+	text-decoration: line-through;
+}
+
+#wrapper {position:relative; }
+
+#content {width:100%; height:100%;}
+
+#logo {
+	position:fixed;
+	width:130px;
+	height:10px;
+	top:30px;
+	left:30px;
+	z-index:999;
+
+}
+
+#nav #logo {
+    display: block;
+}
+
+#main-nav{
+	margin:0px;
+	padding:0px;
+	font-size:11px; 
+	line-height:15px; 
+	color:#999; 
+	list-style:none;
+}
+
+#main-nav li{
+	margin-right:10px;
+	
+}
+
+#main-nav a{
+	color:#999; 
+	text-decoration:none;
+}
+
+
+.row {height:500px; clear:both; width:100%; overflow:hidden; position:relative; background-position: center; background-size: cover;}
+
+#header { padding:30px; height:10px; z-index:999; font-size:12px; line-height:14px; color:#000; width:100%; position:fixed; top:0px; }
+
+#col5 a{color:#000; text-decoration:none;}
+#col {width:147px; margin-right:15px; float:right;}
+#col5 {width:50%; float:left; margin-right:150px;}
+#col1 {width:25%; float:left;}
+.jp {color:#999;}
+.jp a{color:#999;}
+
+h1 {font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; margin:0px;}
+
+.folioitem {height:100%; float:left; position:relative; display:none; background-size: cover;}
+.folioitem img {width:100%; height:100%;}
+#overlay {position:absolute; z-index:899;}
+
+.rotated{
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2)
+}
+
+.credit {padding-top:580px; padding-right:85px; font-family:Helvetica, Arial, sans-serif; color:#CCC; font-size:10px; float:right;}
+
+.credit a{color:#CCC}
+
+
+
+
+#s_infoBut {
+color:#000;
+padding: 2px 0 0;
+line-height: 12px;
+-webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px;
+font-size: 12px;
+font-family: courier,monospace,serif;
+border: solid 1px #000;
+top: 36px;
+right: 90px;
+position: absolute;
+text-decoration: none;
+text-align: center;
+width: 15px;
+height: 13px;
+z-index: 2;
+-webkit-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+-moz-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+-ms-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+-o-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+}
+
+#s_infoBut:hover {
+	color:#FFF;
+	background-color:#000;
+	border: solid 1px #000;
+}
+
+#toggle {
+width:12px;
+height:12px;
+padding:30px;
+right:0px;
+top:0px;
+position:fixed;
+cursor:pointer;
+}
+
+#toggle-nav {
+width:12px;
+height:12px;
+padding:30px;
+right:0px;
+top:0px;
+position:fixed;
+cursor:pointer;
+z-index: 99;
+}
+
+#toggle .bar {
+width: 12px;
+height: 2px;
+margin: 0 0 2px 0;
+background: #000;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+
+#toggle-nav .bar {
+width: 12px;
+height: 2px;
+margin: 0 0 2px 0;
+background: #FFF;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+
+#toggle-c {
+width:12px;
+height:12px;
+right:30px;
+position:fixed;
+cursor:pointer;
+top:30px;
+z-index:9999;
+}
+
+.close-top {
+width: 12px;
+height: 2px;
+margin: 0 0 2px 0;
+background: #FFF;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+
+-webkit-transform: rotate(45deg); 
+-moz-transform: rotate(45deg);  
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5); /*for IE*/
+
+
+}
+
+.close-bot {
+width: 12px;
+height: 2px;
+margin: 0 0 2px 0;
+background: #FFF;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+
+-webkit-transform: rotate(315deg); 
+-moz-transform: rotate(315deg);  
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-5); /*for IE*/
+
+
+}
+
+
+
+
+
+
+
+
+
+
+#tumbax {
+    width:100% !important;
+    border:0px !important;
+    background:none !important;
+}
+
+.tumbax-video-tnail-box {
+    margin:0px !important;
+    box-shadow: none !important;
+    width:100% !importan;
+}
+
+#tumbax-encloser {
+    padding:0px !important;
+}
+
+#tumbax-header {
+    display:none !important;
+}
+
+.tumbax-post p, .tumbax-post blockquote, #tumbax br, #tumbax a, #tumbax-lightbox {
+    display:none !important;
+}
+
+.tumbax-video-list-div {
+    background:none !important;
+}
+
+#tumbax br {
+    display:none !important;
+}
+
+.tumbax-post {
+    margin-bottom:-4px;
+}
+
+#load-more {
+    margin:0px !important;
+    width:100% !important;
+    margin-bottom:-6px !important;
+}
+
+.tumbax-post img {
+    cursor:default !important;
+}
+
+
+
+
+
+.nav-on {
+	opacity:1 !important;
+	display:block !important;
+
+	
+
+}
+
+
+
+
+
+
+.white {
+	background:#FFF !important;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+
+}
+
+
+
+
+
+#toggle-menu {
+    width: 12px;
+    height: 12px;
+    padding: 30px;
+    position:fixed;
+    top:0px;
+    right:0px;
+    z-index: 9999;
+    cursor: pointer;
+    opacity:0;
+    
+    -webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+#toggle-menu div {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    display: block;
+}
+#toggle-menu span {
+    display: block;
+    width: 12px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+#toggle-menu span.top {
+    top: 0px;
+}
+#toggle-menu span.middle {
+    top: 4px;
+}
+#toggle-menu span.bottom {
+    top: 8px;
+}
+#toggle-menu.visible span.top {
+    -webkit-animation: inTop 0.8s forwards;
+    -moz-animation: inTop 0.8s forwards;
+    animation: inTop 0.8s forwards;
+    
+}
+#toggle-menu.visible span.middle {
+    -webkit-animation: inMiddle 0.8s forwards;
+    -moz-animation: inMiddle 0.8s forwards;
+    animation: inMiddle 0.8s forwards;
+    
+}
+#toggle-menu.visible span.bottom {
+    -webkit-animation: inBottom 0.8s forwards;
+    -moz-animation: inBottom 0.8s forwards;
+    animation: inBottom 0.8s forwards;
+
+}   
+#toggle-menu.hidden span.top {
+    -webkit-animation: outTop 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    -moz-animation: outTop 0.8s backwards;
+    -moz-animation-direction: reverse;
+    animation: outTop 0.8s backwards;
+    animation-direction: reverse;
+}
+#toggle-menu.hidden span.middle {
+    -webkit-animation: outMiddle 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    -moz-animation: outMiddle 0.8s backwards;
+    -moz-animation-direction: reverse;
+    animation: outMiddle 0.8s backwards;
+    animation-direction: reverse;
+}
+#toggle-menu.hidden span.bottom {
+    -webkit-animation: outBottom 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    -moz-animation: outBottom 0.8s backwards;
+    -moz-animation-direction: reverse;
+    animation: outBottom 0.8s backwards;
+    animation-direction: reverse;
+}   
+
+@-webkit-keyframes inMiddle {
+    25% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@-moz-keyframes inMiddle {
+    25% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(45deg);
+    }
+}
+
+@keyframes inMiddle {
+    25% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outMiddle {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@-moz-keyframes outMiddle {
+    50% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(45deg);
+    }
+}
+
+@keyframes outMiddle {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inTop {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: 4px;
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        -webkit-transform: rotate(135deg);
+    }
+}
+
+@-moz-keyframes inTop {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: 4px;
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        -moz-transform: rotate(135deg);
+    }
+}
+
+@keyframes inTop {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: 4px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        transform: rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outTop {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 4px;
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        -webkit-transform: rotate(135deg);
+    }
+}
+
+@-moz-keyframes outTop {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 4px;
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        -moz-transform: rotate(135deg);
+    }
+}
+
+@keyframes outTop {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 4px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        transform: rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBottom {
+    0% {
+        top: 8px;
+    }
+    25% {
+        top: 4px;
+        -webkit-transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        top: 4px;
+        -webkit-transform: rotate(135deg);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes inBottom {
+    0% {
+        top: 8px;
+    }
+    25% {
+        top: 4px;
+        -moz-transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        top: 4px;
+        -moz-transform: rotate(135deg);
+        opacity: 0;
+    }
+}
+
+@keyframes inBottom {
+    0% {
+        top: 8px;
+    }
+    25% {
+        top: 4px;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        top: 4px;
+        transform: rotate(135deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes outBottom {
+    0% {
+        top: 8px;
+    }
+    50% {
+        top: 4px;
+        -webkit-transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        top: 4px;
+        -webkit-transform: rotate(135deg);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes outBottom {
+    0% {
+        top: 8px;
+    }
+    50% {
+        top: 4px;
+        -moz-transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        top: 4px;
+        -moz-transform: rotate(135deg);
+        opacity: 1;
+    }
+}
+
+@keyframes outBottom {
+    0% {
+        top: 8px;
+    }
+    50% {
+        top: 4px;
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        top: 4px;
+        transform: rotate(135deg);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .full-contact {display:none !important;}
+    .half-contact {display:block !important;}
+
+  }
+
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+
+    .information-social {display:none !important; }
+    .information-expertise {float:right !important;}
+    .information-about {margin-right:60px !important;}
+    .information-content {width:700px !important;}
+
+
+
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+
+    .information-social {display:none !important;}
+    .information-expertise {display:none !important;}
+    .information-about {margin-right:0px !important;}
+    .information-content {width:450px !important; padding: 0 30px !important;}
+
+    
+
+.small-contact {display:block;}
+.half-contact {display:none !important;}
+
+
+.subnav {
+        display:none !important;
+    }
+
+    
+
+    
+
+    .small-nav {
+        display:block !important;
+    }
+
+
+
+}
+
+
+
+@media only screen and (max-width: 770px) {
+
+    .folioitem {width:100%; height:25%;}
+
+}
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+@media only screen and (max-width: 510px) {
+
+    .information-content {
+        width:340px !important;
+    }
+
+    .information-about {
+        width:auto !important;
+    }
+
+    .desktop-text {
+        display:none;
+    }
+
+    .small-nav {
+        margin-top: 20px !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 380px) {
+
+        #nav, #nav .information-about {
+        font-size:9px !important;
+        line-height: 15px !important;
+    }
+
+    .desktop-text {
+        display:none !important;
+    }
+
+    .information-content {
+        width:auto !important;
+    }
+
+    .small-nav {
+        margin-top: 17px !important;
+    }
+
+}
+
+
+
+
+
+
+</style>
+<style media="" data-href="css/video-js.css">/*
+VideoJS Default Styles (http://videojs.com)
+Version GENERATED_AT_BUILD
+*/
+
+/*
+REQUIRED STYLES (be careful overriding)
+================================================================================ */
+/* When loading the player, the video tag is replaced with a DIV,
+   that will hold the video tag or object tag for other playback methods.
+   The div contains the video playback element (Flash or HTML5) and controls, and sets the width and height of the video.
+
+   ** If you want to add some kind of border/padding (e.g. a frame), or special positioning, use another containing element.
+   Otherwise you risk messing up control positioning and full window mode. **
+*/
+.video-js {
+  background-color: #FFF;
+  position: relative;
+  padding: 0;
+  /* Start with 10px for base font size so other dimensions can be em based and easily calculable. */
+  font-size: 10px;
+  /* Allow poster to be vertially aligned. */
+  vertical-align: middle;
+  /*  display: table-cell; */ /*This works in Safari but not Firefox.*/
+}
+
+/* Playback technology elements expand to the width/height of the containing div.
+    <video> or <object> */
+.video-js .vjs-tech {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 101%;
+  height: 101%;
+}
+/* Fix for Firefox 9 fullscreen (only if it is enabled). Not needed when checking fullScreenEnabled. */
+.video-js:-moz-full-screen { position: absolute; }
+
+/* Fullscreen Styles */
+body.vjs-full-window {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto; /* Fix for IE6 full-window. http://www.cssplay.co.uk/layouts/fixed.html */
+}
+.video-js.vjs-fullscreen {
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+  _position: absolute; /* IE6 Full-window (underscore hack) */
+}
+.video-js:-webkit-full-screen {
+  width: 100% !important; height: 100% !important;
+}
+
+/* Poster Styles */
+.vjs-poster {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  cursor: pointer;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.vjs-poster img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+/* Text Track Styles */
+/* Overall track holder for both captions and subtitles */
+.video-js .vjs-text-track-display {
+  text-align: center;
+  position: absolute;
+  bottom: 4em;
+  left: 1em; /* Leave padding on left and right */
+  right: 1em;
+  font-family: Arial, sans-serif;
+}
+/* Individual tracks */
+.video-js .vjs-text-track {
+  display: none;
+  font-size: 1.4em;
+  text-align: center;
+  margin-bottom: 0.1em;
+  /* Transparent black background, or fallback to all black (oldIE) */
+  background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.50);
+}
+.video-js .vjs-subtitles { color: #fff; } /* Subtitles are white */
+.video-js .vjs-captions { color: #fc6; } /* Captions are yellow */
+.vjs-tt-cue { display: block; }
+
+/* Fading sytles, used to fade control bar. */
+.vjs-fade-in {
+  display: block !important;
+  visibility: visible; /* Needed to make sure things hide in older browsers too. */
+  opacity: 1;
+
+  -webkit-transition: visibility 0.1s, opacity 0.1s;
+     -moz-transition: visibility 0.1s, opacity 0.1s;
+      -ms-transition: visibility 0.1s, opacity 0.1s;
+       -o-transition: visibility 0.1s, opacity 0.1s;
+          transition: visibility 0.1s, opacity 0.1s;
+}
+.vjs-fade-out {
+  display: block !important;
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: visibility 1.5s, opacity 1.5s;
+     -moz-transition: visibility 1.5s, opacity 1.5s;
+      -ms-transition: visibility 1.5s, opacity 1.5s;
+       -o-transition: visibility 1.5s, opacity 1.5s;
+          transition: visibility 1.5s, opacity 1.5s;
+
+  /* Wait a moment before fading out the control bar */
+  -webkit-transition-delay: 2s;
+     -moz-transition-delay: 2s;
+      -ms-transition-delay: 2s;
+       -o-transition-delay: 2s;
+          transition-delay: 2s;
+}
+/* Hide disabled or unsupported controls */
+.vjs-default-skin .vjs-hidden { display: none; }
+
+.vjs-lock-showing {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* DEFAULT SKIN (override in another file to create new skins)
+================================================================================
+Instead of editing this file, I recommend creating your own skin CSS file to be included after this file,
+so you can upgrade to newer versions easier. You can remove all these styles by removing the 'vjs-default-skin' class from the tag. */
+
+/* Base UI Component Classes
+-------------------------------------------------------------------------------- */
+@font-face{
+  font-family: 'VideoJS';
+  
+  font-weight: normal;
+  font-style: normal;
+}
+
+.vjs-default-skin {
+  color: #ccc;
+}
+
+/* Slider - used for Volume bar and Seek bar */
+.vjs-default-skin .vjs-slider {
+  outline: 0; /* Replace browser focus hightlight with handle highlight */
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+
+  background: rgb(50, 50, 50); /* IE8- Fallback */
+  background: rgba(100, 100, 100, 0.5);
+}
+
+.vjs-default-skin .vjs-slider:focus {
+  background: rgb(70, 70, 70); /* IE8- Fallback */
+  background: rgba(100, 100, 100, 0.70);
+
+  -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 1);
+     -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 1);
+          box-shadow: 0 0 2em rgba(255, 255, 255, 1);
+}
+
+.vjs-default-skin .vjs-slider-handle {
+  position: absolute;
+  /* Needed for IE6 */
+  left: 0;
+  top: 0;
+}
+
+.vjs-default-skin .vjs-slider-handle:before {
+  /*content: "\f111";*/ /* Circle icon = f111 */
+  content: "\e009"; /* Square icon */
+  font-family: VideoJS;
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0em 0em 1em #fff;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* Rotate the square icon to make a diamond */
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+/* Control Bar
+-------------------------------------------------------------------------------- */
+/* The default control bar. Created by controls.js */
+.vjs-default-skin .vjs-control-bar {
+  display: none; /* Start hidden */
+  position: absolute;
+  /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
+  bottom: 0;
+  /* 100% width of player div */
+  left: 0;
+  right: 0;
+  /* Controls are absolutely position, so no padding necessary */
+  padding: 0;
+  margin: 0;
+  /* Height includes any margin you want above or below control items */
+  height: 3.0em;
+  background-color: rgb(0, 0, 0);
+  /* Slight blue so it can be seen more easily on black. */
+  background-color: rgba(7, 40, 50, 0.7);
+  /* Default font settings */
+  font-style: normal;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+}
+
+/* General styles for individual controls. */
+.vjs-default-skin .vjs-control {
+  outline: none;
+  position: relative;
+  float: left;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 3.0em;
+  width: 4em;
+}
+
+/* FontAwsome button icons */
+.vjs-default-skin .vjs-control:before {
+  font-family: VideoJS;
+  font-size: 1.5em;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Replacement for focus outline */
+.vjs-default-skin .vjs-control:focus:before,
+.vjs-default-skin .vjs-control:hover:before {
+  text-shadow: 0em 0em 1em rgba(255, 255, 255, 1);
+}
+
+.vjs-default-skin .vjs-control:focus { /*  outline: 0; */ /* keyboard-only users cannot see the focus on several of the UI elements when this is set to 0 */ }
+
+/* Hide control text visually, but have it available for screenreaders: h5bp.com/v */
+.vjs-default-skin .vjs-control-text { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Play/Pause
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-play-control {
+  width: 5em;
+  cursor: pointer;
+}
+.vjs-default-skin .vjs-play-control:before {
+  content: "\e001"; /* Play Icon */
+}
+.vjs-default-skin.vjs-playing .vjs-play-control:before {
+  content: "\e002"; /* Pause Icon */
+}
+
+/* Rewind
+-------------------------------------------------------------------------------- */
+/*.vjs-default-skin .vjs-rewind-control { width: 5em; cursor: pointer !important; }
+
+*/
+
+/* Volume/Mute
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-mute-control,
+.vjs-default-skin .vjs-volume-menu-button {
+  cursor: pointer;
+  float: right;
+}
+.vjs-default-skin .vjs-mute-control:before,
+.vjs-default-skin .vjs-volume-menu-button:before {
+  content: "\e006"; /* Full volume */
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-0:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-0:before {
+  content: "\e003"; /* No volume */
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-1:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-1:before {
+  content: "\e004"; /* Half volume */
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-2:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-2:before {
+  content: "\e005"; /* Full volume */
+}
+
+.vjs-default-skin .vjs-volume-control {
+  width: 5em;
+  float: right;
+}
+.vjs-default-skin .vjs-volume-bar {
+  width: 5em;
+  height: 0.6em;
+  margin: 1.1em auto 0;
+}
+
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu-content {
+  height: 2.9em;
+}
+
+.vjs-default-skin .vjs-volume-level {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.5em;
+
+  background: #66A8CC
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC)
+    -50% 0 repeat;
+}
+.vjs-default-skin .vjs-volume-bar .vjs-volume-handle {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.vjs-default-skin .vjs-volume-handle:before {
+  font-size: 0.9em;
+  top: -0.2em;
+  left: -0.2em;
+
+  width: 1em;
+  height: 1em;
+}
+
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu .vjs-menu-content {
+  width: 6em;
+  left: -4em;
+}
+
+/*.vjs-default-skin .vjs-menu-button .vjs-volume-control {
+  height: 1.5em;
+}*/
+
+/* Progress
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-progress-control {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto;
+  font-size: 0.3em;
+  height: 1em;
+  /* Set above the rest of the controls. */
+  top: -1em;
+
+  /* Shrink the bar slower than it grows. */
+  -webkit-transition: top 0.4s, height 0.4s, font-size 0.4s, -webkit-transform 0.4s;
+     -moz-transition: top 0.4s, height 0.4s, font-size 0.4s,    -moz-transform 0.4s;
+       -o-transition: top 0.4s, height 0.4s, font-size 0.4s,      -o-transform 0.4s;
+          transition: top 0.4s, height 0.4s, font-size 0.4s,         transform 0.4s;
+
+}
+
+/* On hover, make the progress bar grow to something that's more clickable.
+    This simply changes the overall font for the progress bar, and this
+    updates both the em-based widths and heights, as wells as the icon font */
+.vjs-default-skin:hover .vjs-progress-control {
+  font-size: .9em;
+
+  /* Even though we're not changing the top/height, we need to include them in
+      the transition so they're handled correctly. */
+  -webkit-transition: top 0.2s, height 0.2s, font-size 0.2s, -webkit-transform 0.2s;
+     -moz-transition: top 0.2s, height 0.2s, font-size 0.2s,    -moz-transform 0.2s;
+       -o-transition: top 0.2s, height 0.2s, font-size 0.2s,      -o-transform 0.2s;
+          transition: top 0.2s, height 0.2s, font-size 0.2s,         transform 0.2s;
+}
+
+/* -webkit-Box containing play and load progresses. Also acts as seek scrubber. */
+.vjs-default-skin .vjs-progress-holder {
+  /* Placement within the progress control item */
+  height: 100%;
+}
+
+/* Progress Bars */
+.vjs-default-skin .vjs-progress-holder .vjs-play-progress,
+.vjs-default-skin .vjs-progress-holder .vjs-load-progress {
+  position: absolute;
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Needed for IE6 */
+  left: 0;
+  top: 0;
+}
+
+.vjs-default-skin .vjs-play-progress {
+  /*
+    Using a data URI to create the white diagonal lines with a transparent
+      background. Surprising works in IE8.
+      Created using http://www.patternify.com
+    Changing the first color value will change the bar color.
+    Also using a paralax effect to make the lines move backwards.
+      The -50% left position makes that happen.
+  */
+  background: #66A8CC
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC)
+    -50% 0 repeat;
+}
+.vjs-default-skin .vjs-load-progress {
+  background: rgb(100, 100, 100); /* IE8- Fallback */
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.vjs-default-skin .vjs-seek-handle {
+  width: 1.5em;
+  height: 100%;
+}
+
+.vjs-default-skin .vjs-seek-handle:before {
+  padding-top: 0.1em; /* Minor adjustment */
+}
+
+/* Time Display
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-time-controls {
+  font-size: 1em;
+  /* Align vertically by making the line height the same as the control bar */
+  line-height: 3em;
+}
+.vjs-default-skin .vjs-current-time { float: left; }
+.vjs-default-skin .vjs-duration { float: left; }
+/* Remaining time is in the HTML, but not included in default design */
+.vjs-default-skin .vjs-remaining-time { display: none; float: left; }
+.vjs-time-divider { float: left; line-height: 3em; }
+
+/* Fullscreen
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-fullscreen-control {
+  width: 3.8em;
+  cursor: pointer;
+  float: right;
+}
+.vjs-default-skin .vjs-fullscreen-control:before {
+  content: "\e000"; /* Enter full screen */
+}
+.vjs-default-skin.vjs-fullscreen .vjs-fullscreen-control:before {
+  content: "\e00b"; /* Exit full screen */
+}
+
+/* Big Play Button (at start)
+---------------------------------------------------------*/
+.vjs-default-skin .vjs-big-play-button {
+  display: block;
+  z-index: 2;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  width: 12.0em;
+  height: 8.0em;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 1;
+
+  /* Need a slightly gray bg so it can be seen on black backgrounds */
+  background-color: rgb(40, 40, 40);
+  background-color: rgba(7, 40, 50, 0.7);
+
+  border: 0.3em solid rgb(50, 50, 50);
+  border-color: rgba(255, 255, 255, 0.25);
+
+  -webkit-border-radius: 25px;
+     -moz-border-radius: 25px;
+          border-radius: 25px;
+
+  -webkit-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+     -moz-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+          box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+
+  -webkit-transition: border 0.4s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+     -moz-transition: border 0.4s,    -moz-box-shadow 0.4s,    -moz-transform 0.4s;
+       -o-transition: border 0.4s,      -o-box-shadow 0.4s,      -o-transform 0.4s;
+          transition: border 0.4s,         box-shadow 0.4s,         transform 0.4s;
+}
+
+.vjs-default-skin:hover .vjs-big-play-button,
+.vjs-default-skin .vjs-big-play-button:focus {
+  outline: 0;
+  border-color: rgb(255, 255, 255);
+  border-color: rgba(255, 255, 255, 1);
+  /* IE8 needs a non-glow hover state */
+  background-color: rgb(80, 80, 80);
+  background-color: rgba(50, 50, 50, 0.75);
+
+  -webkit-box-shadow: 0 0 3em #fff;
+     -moz-box-shadow: 0 0 3em #fff;
+          box-shadow: 0 0 3em #fff;
+
+  -webkit-transition: border 0s, -webkit-box-shadow 0s, -webkit-transform 0s;
+     -moz-transition: border 0s,    -moz-box-shadow 0s,    -moz-transform 0s;
+       -o-transition: border 0s,      -o-box-shadow 0s,      -o-transform 0s;
+          transition: border 0s,         box-shadow 0s,         transform 0s;
+}
+
+.vjs-default-skin .vjs-big-play-button:before {
+  content: "\e001"; /* Play icon */
+  font-family: VideoJS;
+  font-size: 3em;
+  line-height: 2.66;
+  text-shadow: 0.05em 0.05em 0.1em #000;
+  text-align: center; /* Needed for IE8 */
+
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Loading Spinner
+---------------------------------------------------------*/
+.vjs-loading-spinner {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  font-size: 5em;
+  line-height: 1;
+
+  width: 1em;
+  height: 1em;
+
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+
+  opacity: 0.75;
+
+  -webkit-animation: spin 1.5s infinite linear;
+     -moz-animation: spin 1.5s infinite linear;
+       -o-animation: spin 1.5s infinite linear;
+          animation: spin 1.5s infinite linear;
+}
+
+.vjs-default-skin .vjs-loading-spinner:before {
+  content: "\e00a"; /* Loading spinner icon */
+  font-family: VideoJS;
+
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  text-shadow: 0em 0em 0.1em #000;
+}
+
+/* Add a gradient to the spinner by overlaying another copy.
+   Text gradient plus a text shadow doesn't work
+   and `background-clip: text` only works in Webkit. */
+.vjs-default-skin .vjs-loading-spinner:after {
+  content: "\e00a"; /* Loading spinner icon */
+  font-family: VideoJS;
+
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+@-o-keyframes spin {
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); }
+}
+@-ms-keyframes spin {
+  0% { -ms-transform: rotate(0deg); }
+  100% { -ms-transform: rotate(359deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+/* Menu Buttons (Captions/Subtitles/etc.)
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-menu-button {
+  float: right;
+  cursor: pointer;
+}
+
+.vjs-default-skin .vjs-menu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0em; /* (Width of vjs-menu - width of button) / 2 */
+  width: 0em;
+  height: 0em;
+  margin-bottom: 3em;
+
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
+
+  border-top: 1.55em solid rgb(0, 0, 0); /* Same top as ul bottom */
+  border-top-color: rgba(7, 40, 50, 0.5); /* Same as ul background */
+}
+
+/* Button Pop-up Menu */
+.vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content {
+  display: block;
+  padding: 0; margin: 0;
+  position: absolute;
+  width: 10em;
+  bottom: 1.5em; /* Same bottom as vjs-menu border-top */
+  max-height: 15em;
+  overflow: auto;
+
+  left: -5em; /* Width of menu - width of button / 2 */
+
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(7, 40, 50, 0.7);
+
+  -webkit-box-shadow: -20px -20px 0px rgba(255, 255, 255, 0.5);
+     -moz-box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
+          box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
+}
+
+/*.vjs-default-skin .vjs-menu-button:focus ul,*/ /* This is not needed because keyboard accessibility for the caption button is not handled with the focus any more. */
+.vjs-default-skin .vjs-menu-button:hover .vjs-menu {
+  display: block;
+}
+.vjs-default-skin .vjs-menu-button ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0.3em 0 0.3em 0;
+  line-height: 1.4em;
+  font-size: 1.2em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: lowercase;
+}
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected {
+  background-color: #000;
+}
+.vjs-default-skin .vjs-menu-button ul li:focus,
+.vjs-default-skin .vjs-menu-button ul li:hover,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:focus,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:hover {
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #111;
+  outline: 0;
+
+  -webkit-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+     -moz-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+          box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+}
+.vjs-default-skin .vjs-menu-button ul li.vjs-menu-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 2em;
+  padding: 0;
+  margin: 0 0 0.3em 0;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* Subtitles Button */
+.vjs-default-skin .vjs-subtitles-button:before { content: "\e00c"; }
+
+/* There's unfortunately no CC button in FontAwesome, so we need
+    to manually create one. Please +1 the fontawesome request.
+    https://github.com/FortAwesome/Font-Awesome/issues/968 */
+.vjs-default-skin .vjs-captions-button {
+  font-size: 1em; /* Font icons are 1.5em */
+}
+.vjs-default-skin .vjs-captions-button:before {
+  content: "\e008";
+  font-family: VideoJS;
+  font-size: 1.5em;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-shadow: none;
+}
+
+
+/* Replacement for focus outline */
+.vjs-default-skin .vjs-captions-button:focus .vjs-control-content:before,
+.vjs-default-skin .vjs-captions-button:hover .vjs-control-content:before {
+  -webkit-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+     -moz-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+          box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+}
+
+
+.vjs-loading-spinner div {display:none;}html {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.load-video {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left:30px;
+  bottom:35px;
+  background-size:contain;
+  -webkit-animation: 0.7s spin infinite;
+          animation: 0.7s spin infinite;
+}
+.load-video::before, .load-video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-animation: .35s infinite alternate linear;
+          animation: .35s infinite alternate linear;
+}
+.load-video::before {
+   
+  background-size:contain;
+  -webkit-animation-name: blur1;
+          animation-name: blur1;
+}
+.load-video::after {
+  
+  background-size:contain;
+  -webkit-animation-name: blur2;
+          animation-name: blur2;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes blur1 {
+  to {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+@keyframes blur1 {
+  to {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+@-webkit-keyframes blur2 {
+  to {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+}
+@keyframes blur2 {
+  to {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+}
+
+.logo-wrapper {
+    position: absolute;
+    width:100%;
+    height:100%;
+    text-align: center;
+}
+
+#canvas {
+    position: relative;
+     top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    width:75% !important;
+    max-width: 600px;
+    margin:auto !important;
+    background-color: transparent !important;
+}
+
+
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@font-face {
+  font-family: 'batfont';
+  
+  
+       
+       
+       
+       
+}
+
+
+body {
+    font-size:1em; margin:0px; font-family:"batfont", 'Andale Mono', monospace; font-weight:normal; font-style:normal; -webkit-font-smoothing: antialiased;
+    overflow-y:hidden; background-color:#000; -moz-osx-font-smoothing: grayscale; overflow-y: auto;
+}
+
+body.black
+{
+    background-color: black;
+
+}
+
+a {text-decoration: none; color: #FFF;}
+
+
+h3 {
+    margin:0 0 16px 0;
+}
+
+p {
+    margin:0px;
+}
+
+
+
+.ie-text {
+    text-decoration: line-through;
+    cursor: pointer;
+    display:none;
+}
+
+.ie #toggle-menu, .ie .nav-right, .ie .desktop-text, .ie .small-nav{
+    display:none !important;
+}
+
+.ie .ie-text {
+    display:inline-block !important;
+}
+
+.video-content video {
+    background: #f6f6f6 !important;
+}
+
+.del video {
+    background: #000 !important;
+}
+
+
+.load-off {
+    opacity:0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+#preload-loader {
+    position: fixed;
+    top:200%;
+    right:200%;
+}
+
+#overlay {
+    width:102%;
+    top:-1px;
+    left:-1px;
+
+}
+
+ #margin {
+        background-color: #FFF;
+        height:70px;
+        width:100%;
+        position:fixed;
+        z-index:999;
+        top:0;
+    }
+
+
+
+video { background:#000 !important;}
+
+.universal_video_backgroundBorder {background:#000 !important;}
+
+
+ .bat-load {
+        width: 60px;
+        height: 43px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-left:-30px;
+        margin-top:-22px;
+        
+        animation: play 1s steps(16) infinite;     
+    }
+    
+    @keyframes play {
+        100% { background-position: -960px; }
+    }
+
+/* FIX */
+
+.royal_preloader {
+    position: fixed;
+    width:100%;
+    height:100%;
+}
+
+#overlay img {
+    display: block !important;
+}
+
+
+.small-nav-information {
+    background-color: #FFF;
+    color:#ff0017;
+}
+
+.small-nav-information:hover {
+    text-decoration: none !important;
+}
+
+#pyramid {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    display:none;
+    background: #f80015;
+}
+
+.object-wrapper {
+    position: absolute;
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+.object-container {
+    position: relative;
+    width:100%;
+    height:100%;
+}
+
+.object-container object {
+    width:100%;
+    height:100%;
+    position:absolute;
+}
+
+.video-content img {
+    display:none;
+    width:100%;
+    height:100%;
+}
+
+.universal_video_background.thumbs .thumbsHolderWrapper {
+    display:none !important;
+}
+
+.grid--item.-large {
+    display:none !important;
+}
+
+#social-tumblr {
+    text-align: left;
+    width:15%;
+}
+
+.desktop-text {
+    text-decoration: line-through;
+    cursor: pointer;
+    display:inline-block;
+}
+
+#social-soundcloud {
+    text-align: center;
+    width:25%;
+}
+
+.hidden-text {
+    opacity:0 !important;
+}
+
+.phhhoto-cover {
+    position:absolute;
+    bottom:0px;
+    background: #FFF;
+    height:60px;
+    width:100%;
+}
+
+#logo-white {z-index: 1000; position: absolute; display:none;}
+
+
+
+.black {
+    background-color: #000 !important;
+}
+
+#social-phhhoto {
+    cursor:pointer;
+}
+
+#grid {
+    background-color: #FFF;
+    margin-top: 70px;
+}
+
+body.black #frame-holder {
+    background-color: #000 !important;
+}
+
+#frame-holder, #frame-holder-grid {
+    display:none;
+    position:absolute; 
+    height:100%;
+    width:100%;
+    top:0px !important;
+
+}
+
+.bat-load {
+    display: none;
+}
+
+.bottom {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    margin:0px;
+    padding:0px;
+}
+
+.small-nav {
+    display:none;
+    width:100%;
+    position:absolute;
+    height:30px;
+    top:50%;
+    margin-top: 10px !important;
+    box-sizing: border-box;
+
+
+}
+
+.small-nav li {
+    float:left;
+    width:33.33333%;
+    height:30px;
+    border:1px solid #FFF;
+    text-align: center;
+    line-height: 30px;
+    display:block;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.information-about ul li:first-child {
+        border-right: none !important;
+    }
+
+    .information-about ul li:last-child {
+        border-left: none !important;
+    }
+
+#nav-trans {
+    background-color: #000 !important;
+    opacity:0.4 !important;
+    width:100%;
+    height:100%;
+    position:absolute;
+    display:none;
+}
+
+#about-portfolio {
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.phone {
+    float:right;
+    margin:0px;
+}
+
+.email {
+    margin-left: 0px;
+    float:left;
+}
+
+.half-contact {display:none; width:100%;}
+.half-contact span {float:right;}
+
+.small-contact {display:none; width:100%;}
+
+.half-contact li {
+    float:left;
+    width:20%;
+}
+
+
+.setAsBg {
+    opacity:0;
+
+    -webkit-transition: all 5s;
+    -moz-transition: all 5s;
+    -o-transition: all 5s;
+    transition: all 5s;
+}
+
+
+#nav {
+    text-align: justify;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height:12px;
+    color:#FFF; 
+    top:0px;
+    opacity:0;
+    background-color:#000;
+    
+
+
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9990;
+    
+    background-size:cover;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+
+    
+
+}
+
+#content-holder {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    padding-top: 70px;
+    background: #FFF;
+    border: 0px !important;
+    display:none;
+}
+    
+#nav h1 {
+    width:600px;
+    margin:0 auto;
+    text-align:center;
+    color:#FFF;
+}
+
+
+.information {
+    position:absolute;
+    width:100%;
+    height:230px;
+    overflow:hidden;
+    top:50%;
+    margin-top:-115px;
+    line-height: 16px;
+}
+
+.information-content {
+    width:900px;
+    height:100%;
+    margin:0 auto;
+    padding:0 150px;
+
+    -webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+
+.information-expertise {
+    width:27%;
+    float:left;
+    position:relative;
+    height:100%;
+
+    -webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+
+}
+
+.information-expertise ul li:hover {
+    text-decoration: none !important;
+}
+
+.information-social {
+    width:12%;
+    float:right;
+    position:relative;
+    height:100%;
+
+    -webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+
+
+}
+
+.information-about {
+    width:450px;
+    float:left;
+    margin-right: 70px;
+    position:relative;
+    height:100%;
+}
+
+.information ul {
+    margin:0px;
+}
+
+.mask {
+    width: 100%;
+    height:100%;
+    z-index:2;
+    
+    background-repeat: repeat-y;
+    background-size: contain;
+    position:absolute;
+}
+
+
+.copy {
+    width:80px;
+    height:30px;
+    display:block;
+    position:absolute;
+    bottom:120px;
+    right:-20px;
+    text-align: right;
+    font-size: 11px;
+
+    -moz-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    -o-transform-origin: 0% 100%;
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.sydney{
+    width:400px;
+    height:30px;
+    display:block;
+    position:absolute;
+    bottom:50%;
+    right:-160px;
+    text-align: center;
+    line-height:30px;
+    font-size: 12px;
+    z-index: 99;
+
+    
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+.newyork {
+    width:400px;
+    height:30px;
+    display:block;
+    position:absolute;
+    bottom:50%;
+    left:-160px;
+    text-align: center;
+    line-height:30px;
+    font-size: 12px;
+    z-index: 99;
+
+    
+    
+
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+
+.contact{
+    width:400px;
+    height:30px;
+    display:block;
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    margin-left: -200px;
+    text-align: center;
+    line-height:30px;
+    font-size: 12px;
+    z-index: 99;
+}
+
+
+.mainnav {
+    width:100%;
+    text-align: center;
+    padding:0px !important;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -1px;
+    position: absolute;
+    top:50%;
+}
+
+
+.subnav {
+    font-weight: normal;
+    display:block;
+    width:400px;
+}
+
+.subnav li {
+    float:left !important;
+    cursor: pointer;
+}
+
+.nav-right {
+    position: absolute;
+    right:20px;
+    bottom:0px;
+    height:340px;
+    top:50%;
+    margin-top:-153px;
+    width:30px;
+}
+
+#nav .container {
+    width:300px;
+    height:30px;
+    overflow:hidden;
+    font-size: 11px;
+    line-height: 12px;
+
+    display: block;
+    -moz-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    -o-transform-origin: 0% 100%;
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#nav ul {
+    list-style: none;
+    padding:0px;
+    margin:0px;
+    
+}
+
+#nav ul span {
+    font-size: 14px;
+    padding-top: 8px;
+}
+
+#nav .container ul li {
+    float:right;
+    padding:10px;
+    display:block;
+}
+
+#nav ul li:hover {
+    text-decoration: line-through;
+}
+
+#wrapper {position:relative; }
+
+#content {width:100%; height:100%;}
+
+#logo {
+    position:fixed;
+    width:130px;
+    height:10px;
+    top:30px;
+    left:30px;
+    z-index:999;
+
+}
+
+#nav #logo {
+    display: block;
+}
+
+#main-nav{
+    margin:0px;
+    padding:0px;
+    font-size:11px; 
+    line-height:15px; 
+    color:#999; 
+    list-style:none;
+}
+
+#main-nav li{
+    margin-right:10px;
+    
+}
+
+#main-nav a{
+    color:#999; 
+    text-decoration:none;
+}
+
+
+.row {height:500px; clear:both; width:100%; overflow:hidden; position:relative; background-position: center; background-size: cover;}
+
+#header { padding:30px; height:10px; z-index:999; font-size:12px; line-height:14px; color:#000; width:100%; position:fixed; top:0px; }
+
+#col5 a{color:#000; text-decoration:none;}
+#col {width:147px; margin-right:15px; float:right;}
+#col5 {width:50%; float:left; margin-right:150px;}
+#col1 {width:25%; float:left;}
+.jp {color:#999;}
+.jp a{color:#999;}
+
+h1 {font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; margin:0px;}
+
+.folioitem {height:100%; float:left; position:relative; display:none; background-size: cover;}
+.folioitem img {width:100%; height:100%;}
+#overlay {position:absolute; z-index:899;}
+
+.rotated{
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2)
+}
+
+.credit {padding-top:580px; padding-right:85px; font-family:Helvetica, Arial, sans-serif; color:#CCC; font-size:10px; float:right;}
+
+.credit a{color:#CCC}
+
+
+
+
+#s_infoBut {
+color:#000;
+padding: 2px 0 0;
+line-height: 12px;
+-webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px;
+font-size: 12px;
+font-family: courier,monospace,serif;
+border: solid 1px #000;
+top: 36px;
+right: 90px;
+position: absolute;
+text-decoration: none;
+text-align: center;
+width: 15px;
+height: 13px;
+z-index: 2;
+-webkit-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+-moz-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+-ms-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+-o-transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+transition: all 300ms cubic-bezier(0.215,.61,.355,1);
+}
+
+#s_infoBut:hover {
+    color:#FFF;
+    background-color:#000;
+    border: solid 1px #000;
+}
+
+#toggle {
+width:12px;
+height:12px;
+padding:30px;
+right:0px;
+top:0px;
+position:fixed;
+cursor:pointer;
+}
+
+#toggle-nav {
+width:12px;
+height:12px;
+padding:30px;
+right:0px;
+top:0px;
+position:fixed;
+cursor:pointer;
+z-index: 99;
+}
+
+#toggle .bar {
+width: 12px;
+height: 2px;
+margin: 0 0 2px 0;
+background: #000;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+
+#toggle-nav .bar {
+width: 12px;
+height: 2px;
+margin: 0 0 2px 0;
+background: #FFF;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+
+#toggle-c {
+width:12px;
+height:12px;
+right:30px;
+position:fixed;
+cursor:pointer;
+top:30px;
+z-index:9999;
+}
+
+.close-top {
+width: 12px;
+height: 2px;
+margin: 0 0 2px 0;
+background: #FFF;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+
+-webkit-transform: rotate(45deg); 
+-moz-transform: rotate(45deg);  
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5); /*for IE*/
+
+
+}
+
+.close-bot {
+width: 12px;
+height: 2px;
+margin: 0 0 2px 0;
+background: #FFF;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+
+-webkit-transform: rotate(315deg); 
+-moz-transform: rotate(315deg);  
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-5); /*for IE*/
+
+
+}
+
+
+
+
+
+
+
+
+
+
+#tumbax {
+    width:100% !important;
+    border:0px !important;
+    background:none !important;
+}
+
+.tumbax-video-tnail-box {
+    margin:0px !important;
+    box-shadow: none !important;
+    width:100% !importan;
+}
+
+#tumbax-encloser {
+    padding:0px !important;
+}
+
+#tumbax-header {
+    display:none !important;
+}
+
+.tumbax-post p, .tumbax-post blockquote, #tumbax br, #tumbax a, #tumbax-lightbox {
+    display:none !important;
+}
+
+.tumbax-video-list-div {
+    background:none !important;
+}
+
+#tumbax br {
+    display:none !important;
+}
+
+.tumbax-post {
+    margin-bottom:-4px;
+}
+
+#load-more {
+    margin:0px !important;
+    width:100% !important;
+    margin-bottom:-6px !important;
+}
+
+.tumbax-post img {
+    cursor:default !important;
+}
+
+
+
+
+
+.nav-on {
+    opacity:1 !important;
+    display:block !important;
+
+    
+
+}
+
+
+
+
+
+
+.white {
+    background:#FFF !important;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+}
+
+
+
+
+
+#toggle-menu {
+    width: 12px;
+    height: 12px;
+    padding: 30px;
+    position:fixed;
+    top:0px;
+    right:0px;
+    z-index: 9999;
+    cursor: pointer;
+    opacity:0;
+    
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+#toggle-menu div {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    display: block;
+}
+#toggle-menu span {
+    display: block;
+    width: 12px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+#toggle-menu span.top {
+    top: 0px;
+}
+#toggle-menu span.middle {
+    top: 4px;
+}
+#toggle-menu span.bottom {
+    top: 8px;
+}
+#toggle-menu.visible span.top {
+    -webkit-animation: inTop 0.8s forwards;
+    -moz-animation: inTop 0.8s forwards;
+    animation: inTop 0.8s forwards;
+    
+}
+#toggle-menu.visible span.middle {
+    -webkit-animation: inMiddle 0.8s forwards;
+    -moz-animation: inMiddle 0.8s forwards;
+    animation: inMiddle 0.8s forwards;
+    
+}
+#toggle-menu.visible span.bottom {
+    -webkit-animation: inBottom 0.8s forwards;
+    -moz-animation: inBottom 0.8s forwards;
+    animation: inBottom 0.8s forwards;
+
+}   
+#toggle-menu.hidden span.top {
+    -webkit-animation: outTop 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    -moz-animation: outTop 0.8s backwards;
+    -moz-animation-direction: reverse;
+    animation: outTop 0.8s backwards;
+    animation-direction: reverse;
+}
+#toggle-menu.hidden span.middle {
+    -webkit-animation: outMiddle 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    -moz-animation: outMiddle 0.8s backwards;
+    -moz-animation-direction: reverse;
+    animation: outMiddle 0.8s backwards;
+    animation-direction: reverse;
+}
+#toggle-menu.hidden span.bottom {
+    -webkit-animation: outBottom 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    -moz-animation: outBottom 0.8s backwards;
+    -moz-animation-direction: reverse;
+    animation: outBottom 0.8s backwards;
+    animation-direction: reverse;
+}   
+
+@-webkit-keyframes inMiddle {
+    25% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@-moz-keyframes inMiddle {
+    25% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(45deg);
+    }
+}
+
+@keyframes inMiddle {
+    25% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outMiddle {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@-moz-keyframes outMiddle {
+    50% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(45deg);
+    }
+}
+
+@keyframes outMiddle {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inTop {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: 4px;
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        -webkit-transform: rotate(135deg);
+    }
+}
+
+@-moz-keyframes inTop {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: 4px;
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        -moz-transform: rotate(135deg);
+    }
+}
+
+@keyframes inTop {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: 4px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        transform: rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outTop {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 4px;
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        -webkit-transform: rotate(135deg);
+    }
+}
+
+@-moz-keyframes outTop {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 4px;
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        -moz-transform: rotate(135deg);
+    }
+}
+
+@keyframes outTop {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 4px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 4px;
+        transform: rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBottom {
+    0% {
+        top: 8px;
+    }
+    25% {
+        top: 4px;
+        -webkit-transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        top: 4px;
+        -webkit-transform: rotate(135deg);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes inBottom {
+    0% {
+        top: 8px;
+    }
+    25% {
+        top: 4px;
+        -moz-transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        top: 4px;
+        -moz-transform: rotate(135deg);
+        opacity: 0;
+    }
+}
+
+@keyframes inBottom {
+    0% {
+        top: 8px;
+    }
+    25% {
+        top: 4px;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        top: 4px;
+        transform: rotate(135deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes outBottom {
+    0% {
+        top: 8px;
+    }
+    50% {
+        top: 4px;
+        -webkit-transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        top: 4px;
+        -webkit-transform: rotate(135deg);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes outBottom {
+    0% {
+        top: 8px;
+    }
+    50% {
+        top: 4px;
+        -moz-transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        top: 4px;
+        -moz-transform: rotate(135deg);
+        opacity: 1;
+    }
+}
+
+@keyframes outBottom {
+    0% {
+        top: 8px;
+    }
+    50% {
+        top: 4px;
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        top: 4px;
+        transform: rotate(135deg);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .full-contact {display:none !important;}
+    .half-contact {display:block !important;}
+
+  }
+
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+
+    .information-social {display:none !important; }
+    .information-expertise {float:right !important;}
+    .information-about {margin-right:60px !important;}
+    .information-content {width:700px !important;}
+
+
+
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+
+    .information-social {display:none !important;}
+    .information-expertise {display:none !important;}
+    .information-about {margin-right:0px !important;}
+    .information-content {width:450px !important; padding: 0 30px !important;}
+
+    
+
+.small-contact {display:block;}
+.half-contact {display:none !important;}
+
+
+.subnav {
+        display:none !important;
+    }
+
+    
+
+    
+
+    .small-nav {
+        display:block !important;
+    }
+
+
+
+}
+
+
+
+@media only screen and (max-width: 770px) {
+
+    .folioitem {width:100%; height:25%;}
+
+}
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+@media only screen and (max-width: 510px) {
+
+    .information-content {
+        width:340px !important;
+    }
+
+    .information-about {
+        width:auto !important;
+    }
+
+    .desktop-text {
+        display:none;
+    }
+
+    .small-nav {
+        margin-top: 20px !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 380px) {
+
+        #nav, #nav .information-about {
+        font-size:9px !important;
+        line-height: 15px !important;
+    }
+
+    .desktop-text {
+        display:none !important;
+    }
+
+    .information-content {
+        width:auto !important;
+    }
+
+    .small-nav {
+        margin-top: 17px !important;
+    }
+
+}
+
+
+
+
+
+
+</style>
+<style media="" data-href="css/video-js.css">/*
+VideoJS Default Styles (http://videojs.com)
+Version GENERATED_AT_BUILD
+*/
+
+/*
+REQUIRED STYLES (be careful overriding)
+================================================================================ */
+/* When loading the player, the video tag is replaced with a DIV,
+   that will hold the video tag or object tag for other playback methods.
+   The div contains the video playback element (Flash or HTML5) and controls, and sets the width and height of the video.
+
+   ** If you want to add some kind of border/padding (e.g. a frame), or special positioning, use another containing element.
+   Otherwise you risk messing up control positioning and full window mode. **
+*/
+.video-js {
+  background-color: #FFF;
+  position: relative;
+  padding: 0;
+  /* Start with 10px for base font size so other dimensions can be em based and easily calculable. */
+  font-size: 10px;
+  /* Allow poster to be vertially aligned. */
+  vertical-align: middle;
+  /*  display: table-cell; */ /*This works in Safari but not Firefox.*/
+}
+
+/* Playback technology elements expand to the width/height of the containing div.
+    <video> or <object> */
+.video-js .vjs-tech {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 101%;
+  height: 101%;
+}
+/* Fix for Firefox 9 fullscreen (only if it is enabled). Not needed when checking fullScreenEnabled. */
+.video-js:-moz-full-screen { position: absolute; }
+
+/* Fullscreen Styles */
+body.vjs-full-window {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto; /* Fix for IE6 full-window. http://www.cssplay.co.uk/layouts/fixed.html */
+}
+.video-js.vjs-fullscreen {
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+  _position: absolute; /* IE6 Full-window (underscore hack) */
+}
+.video-js:-webkit-full-screen {
+  width: 100% !important; height: 100% !important;
+}
+
+/* Poster Styles */
+.vjs-poster {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  cursor: pointer;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.vjs-poster img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+/* Text Track Styles */
+/* Overall track holder for both captions and subtitles */
+.video-js .vjs-text-track-display {
+  text-align: center;
+  position: absolute;
+  bottom: 4em;
+  left: 1em; /* Leave padding on left and right */
+  right: 1em;
+  font-family: Arial, sans-serif;
+}
+/* Individual tracks */
+.video-js .vjs-text-track {
+  display: none;
+  font-size: 1.4em;
+  text-align: center;
+  margin-bottom: 0.1em;
+  /* Transparent black background, or fallback to all black (oldIE) */
+  background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.50);
+}
+.video-js .vjs-subtitles { color: #fff; } /* Subtitles are white */
+.video-js .vjs-captions { color: #fc6; } /* Captions are yellow */
+.vjs-tt-cue { display: block; }
+
+/* Fading sytles, used to fade control bar. */
+.vjs-fade-in {
+  display: block !important;
+  visibility: visible; /* Needed to make sure things hide in older browsers too. */
+  opacity: 1;
+
+  -webkit-transition: visibility 0.1s, opacity 0.1s;
+     -moz-transition: visibility 0.1s, opacity 0.1s;
+      -ms-transition: visibility 0.1s, opacity 0.1s;
+       -o-transition: visibility 0.1s, opacity 0.1s;
+          transition: visibility 0.1s, opacity 0.1s;
+}
+.vjs-fade-out {
+  display: block !important;
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: visibility 1.5s, opacity 1.5s;
+     -moz-transition: visibility 1.5s, opacity 1.5s;
+      -ms-transition: visibility 1.5s, opacity 1.5s;
+       -o-transition: visibility 1.5s, opacity 1.5s;
+          transition: visibility 1.5s, opacity 1.5s;
+
+  /* Wait a moment before fading out the control bar */
+  -webkit-transition-delay: 2s;
+     -moz-transition-delay: 2s;
+      -ms-transition-delay: 2s;
+       -o-transition-delay: 2s;
+          transition-delay: 2s;
+}
+/* Hide disabled or unsupported controls */
+.vjs-default-skin .vjs-hidden { display: none; }
+
+.vjs-lock-showing {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* DEFAULT SKIN (override in another file to create new skins)
+================================================================================
+Instead of editing this file, I recommend creating your own skin CSS file to be included after this file,
+so you can upgrade to newer versions easier. You can remove all these styles by removing the 'vjs-default-skin' class from the tag. */
+
+/* Base UI Component Classes
+-------------------------------------------------------------------------------- */
+@font-face{
+  font-family: 'VideoJS';
+  
+  
+  
+  
+  font-weight: normal;
+  font-style: normal;
+}
+
+.vjs-default-skin {
+  color: #ccc;
+}
+
+/* Slider - used for Volume bar and Seek bar */
+.vjs-default-skin .vjs-slider {
+  outline: 0; /* Replace browser focus hightlight with handle highlight */
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+
+  background: rgb(50, 50, 50); /* IE8- Fallback */
+  background: rgba(100, 100, 100, 0.5);
+}
+
+.vjs-default-skin .vjs-slider:focus {
+  background: rgb(70, 70, 70); /* IE8- Fallback */
+  background: rgba(100, 100, 100, 0.70);
+
+  -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 1);
+     -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 1);
+          box-shadow: 0 0 2em rgba(255, 255, 255, 1);
+}
+
+.vjs-default-skin .vjs-slider-handle {
+  position: absolute;
+  /* Needed for IE6 */
+  left: 0;
+  top: 0;
+}
+
+.vjs-default-skin .vjs-slider-handle:before {
+  /*content: "\f111";*/ /* Circle icon = f111 */
+  content: "\e009"; /* Square icon */
+  font-family: VideoJS;
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0em 0em 1em #fff;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* Rotate the square icon to make a diamond */
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+/* Control Bar
+-------------------------------------------------------------------------------- */
+/* The default control bar. Created by controls.js */
+.vjs-default-skin .vjs-control-bar {
+  display: none; /* Start hidden */
+  position: absolute;
+  /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
+  bottom: 0;
+  /* 100% width of player div */
+  left: 0;
+  right: 0;
+  /* Controls are absolutely position, so no padding necessary */
+  padding: 0;
+  margin: 0;
+  /* Height includes any margin you want above or below control items */
+  height: 3.0em;
+  background-color: rgb(0, 0, 0);
+  /* Slight blue so it can be seen more easily on black. */
+  background-color: rgba(7, 40, 50, 0.7);
+  /* Default font settings */
+  font-style: normal;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+}
+
+/* General styles for individual controls. */
+.vjs-default-skin .vjs-control {
+  outline: none;
+  position: relative;
+  float: left;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 3.0em;
+  width: 4em;
+}
+
+/* FontAwsome button icons */
+.vjs-default-skin .vjs-control:before {
+  font-family: VideoJS;
+  font-size: 1.5em;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Replacement for focus outline */
+.vjs-default-skin .vjs-control:focus:before,
+.vjs-default-skin .vjs-control:hover:before {
+  text-shadow: 0em 0em 1em rgba(255, 255, 255, 1);
+}
+
+.vjs-default-skin .vjs-control:focus { /*  outline: 0; */ /* keyboard-only users cannot see the focus on several of the UI elements when this is set to 0 */ }
+
+/* Hide control text visually, but have it available for screenreaders: h5bp.com/v */
+.vjs-default-skin .vjs-control-text { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Play/Pause
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-play-control {
+  width: 5em;
+  cursor: pointer;
+}
+.vjs-default-skin .vjs-play-control:before {
+  content: "\e001"; /* Play Icon */
+}
+.vjs-default-skin.vjs-playing .vjs-play-control:before {
+  content: "\e002"; /* Pause Icon */
+}
+
+/* Rewind
+-------------------------------------------------------------------------------- */
+/*.vjs-default-skin .vjs-rewind-control { width: 5em; cursor: pointer !important; }
+
+*/
+
+/* Volume/Mute
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-mute-control,
+.vjs-default-skin .vjs-volume-menu-button {
+  cursor: pointer;
+  float: right;
+}
+.vjs-default-skin .vjs-mute-control:before,
+.vjs-default-skin .vjs-volume-menu-button:before {
+  content: "\e006"; /* Full volume */
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-0:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-0:before {
+  content: "\e003"; /* No volume */
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-1:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-1:before {
+  content: "\e004"; /* Half volume */
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-2:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-2:before {
+  content: "\e005"; /* Full volume */
+}
+
+.vjs-default-skin .vjs-volume-control {
+  width: 5em;
+  float: right;
+}
+.vjs-default-skin .vjs-volume-bar {
+  width: 5em;
+  height: 0.6em;
+  margin: 1.1em auto 0;
+}
+
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu-content {
+  height: 2.9em;
+}
+
+.vjs-default-skin .vjs-volume-level {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.5em;
+
+  background: #66A8CC
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC)
+    -50% 0 repeat;
+}
+.vjs-default-skin .vjs-volume-bar .vjs-volume-handle {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.vjs-default-skin .vjs-volume-handle:before {
+  font-size: 0.9em;
+  top: -0.2em;
+  left: -0.2em;
+
+  width: 1em;
+  height: 1em;
+}
+
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu .vjs-menu-content {
+  width: 6em;
+  left: -4em;
+}
+
+/*.vjs-default-skin .vjs-menu-button .vjs-volume-control {
+  height: 1.5em;
+}*/
+
+/* Progress
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-progress-control {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto;
+  font-size: 0.3em;
+  height: 1em;
+  /* Set above the rest of the controls. */
+  top: -1em;
+
+  /* Shrink the bar slower than it grows. */
+  -webkit-transition: top 0.4s, height 0.4s, font-size 0.4s, -webkit-transform 0.4s;
+     -moz-transition: top 0.4s, height 0.4s, font-size 0.4s,    -moz-transform 0.4s;
+       -o-transition: top 0.4s, height 0.4s, font-size 0.4s,      -o-transform 0.4s;
+          transition: top 0.4s, height 0.4s, font-size 0.4s,         transform 0.4s;
+
+}
+
+/* On hover, make the progress bar grow to something that's more clickable.
+    This simply changes the overall font for the progress bar, and this
+    updates both the em-based widths and heights, as wells as the icon font */
+.vjs-default-skin:hover .vjs-progress-control {
+  font-size: .9em;
+
+  /* Even though we're not changing the top/height, we need to include them in
+      the transition so they're handled correctly. */
+  -webkit-transition: top 0.2s, height 0.2s, font-size 0.2s, -webkit-transform 0.2s;
+     -moz-transition: top 0.2s, height 0.2s, font-size 0.2s,    -moz-transform 0.2s;
+       -o-transition: top 0.2s, height 0.2s, font-size 0.2s,      -o-transform 0.2s;
+          transition: top 0.2s, height 0.2s, font-size 0.2s,         transform 0.2s;
+}
+
+/* -webkit-Box containing play and load progresses. Also acts as seek scrubber. */
+.vjs-default-skin .vjs-progress-holder {
+  /* Placement within the progress control item */
+  height: 100%;
+}
+
+/* Progress Bars */
+.vjs-default-skin .vjs-progress-holder .vjs-play-progress,
+.vjs-default-skin .vjs-progress-holder .vjs-load-progress {
+  position: absolute;
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Needed for IE6 */
+  left: 0;
+  top: 0;
+}
+
+.vjs-default-skin .vjs-play-progress {
+  /*
+    Using a data URI to create the white diagonal lines with a transparent
+      background. Surprising works in IE8.
+      Created using http://www.patternify.com
+    Changing the first color value will change the bar color.
+    Also using a paralax effect to make the lines move backwards.
+      The -50% left position makes that happen.
+  */
+  background: #66A8CC
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC)
+    -50% 0 repeat;
+}
+.vjs-default-skin .vjs-load-progress {
+  background: rgb(100, 100, 100); /* IE8- Fallback */
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.vjs-default-skin .vjs-seek-handle {
+  width: 1.5em;
+  height: 100%;
+}
+
+.vjs-default-skin .vjs-seek-handle:before {
+  padding-top: 0.1em; /* Minor adjustment */
+}
+
+/* Time Display
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-time-controls {
+  font-size: 1em;
+  /* Align vertically by making the line height the same as the control bar */
+  line-height: 3em;
+}
+.vjs-default-skin .vjs-current-time { float: left; }
+.vjs-default-skin .vjs-duration { float: left; }
+/* Remaining time is in the HTML, but not included in default design */
+.vjs-default-skin .vjs-remaining-time { display: none; float: left; }
+.vjs-time-divider { float: left; line-height: 3em; }
+
+/* Fullscreen
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-fullscreen-control {
+  width: 3.8em;
+  cursor: pointer;
+  float: right;
+}
+.vjs-default-skin .vjs-fullscreen-control:before {
+  content: "\e000"; /* Enter full screen */
+}
+.vjs-default-skin.vjs-fullscreen .vjs-fullscreen-control:before {
+  content: "\e00b"; /* Exit full screen */
+}
+
+/* Big Play Button (at start)
+---------------------------------------------------------*/
+.vjs-default-skin .vjs-big-play-button {
+  display: block;
+  z-index: 2;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  width: 12.0em;
+  height: 8.0em;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 1;
+
+  /* Need a slightly gray bg so it can be seen on black backgrounds */
+  background-color: rgb(40, 40, 40);
+  background-color: rgba(7, 40, 50, 0.7);
+
+  border: 0.3em solid rgb(50, 50, 50);
+  border-color: rgba(255, 255, 255, 0.25);
+
+  -webkit-border-radius: 25px;
+     -moz-border-radius: 25px;
+          border-radius: 25px;
+
+  -webkit-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+     -moz-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+          box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+
+  -webkit-transition: border 0.4s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+     -moz-transition: border 0.4s,    -moz-box-shadow 0.4s,    -moz-transform 0.4s;
+       -o-transition: border 0.4s,      -o-box-shadow 0.4s,      -o-transform 0.4s;
+          transition: border 0.4s,         box-shadow 0.4s,         transform 0.4s;
+}
+
+.vjs-default-skin:hover .vjs-big-play-button,
+.vjs-default-skin .vjs-big-play-button:focus {
+  outline: 0;
+  border-color: rgb(255, 255, 255);
+  border-color: rgba(255, 255, 255, 1);
+  /* IE8 needs a non-glow hover state */
+  background-color: rgb(80, 80, 80);
+  background-color: rgba(50, 50, 50, 0.75);
+
+  -webkit-box-shadow: 0 0 3em #fff;
+     -moz-box-shadow: 0 0 3em #fff;
+          box-shadow: 0 0 3em #fff;
+
+  -webkit-transition: border 0s, -webkit-box-shadow 0s, -webkit-transform 0s;
+     -moz-transition: border 0s,    -moz-box-shadow 0s,    -moz-transform 0s;
+       -o-transition: border 0s,      -o-box-shadow 0s,      -o-transform 0s;
+          transition: border 0s,         box-shadow 0s,         transform 0s;
+}
+
+.vjs-default-skin .vjs-big-play-button:before {
+  content: "\e001"; /* Play icon */
+  font-family: VideoJS;
+  font-size: 3em;
+  line-height: 2.66;
+  text-shadow: 0.05em 0.05em 0.1em #000;
+  text-align: center; /* Needed for IE8 */
+
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Loading Spinner
+---------------------------------------------------------*/
+.vjs-loading-spinner {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  font-size: 5em;
+  line-height: 1;
+
+  width: 1em;
+  height: 1em;
+
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+
+  opacity: 0.75;
+
+  -webkit-animation: spin 1.5s infinite linear;
+     -moz-animation: spin 1.5s infinite linear;
+       -o-animation: spin 1.5s infinite linear;
+          animation: spin 1.5s infinite linear;
+}
+
+.vjs-default-skin .vjs-loading-spinner:before {
+  content: "\e00a"; /* Loading spinner icon */
+  font-family: VideoJS;
+
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  text-shadow: 0em 0em 0.1em #000;
+}
+
+/* Add a gradient to the spinner by overlaying another copy.
+   Text gradient plus a text shadow doesn't work
+   and `background-clip: text` only works in Webkit. */
+.vjs-default-skin .vjs-loading-spinner:after {
+  content: "\e00a"; /* Loading spinner icon */
+  font-family: VideoJS;
+
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+@-o-keyframes spin {
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); }
+}
+@-ms-keyframes spin {
+  0% { -ms-transform: rotate(0deg); }
+  100% { -ms-transform: rotate(359deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+/* Menu Buttons (Captions/Subtitles/etc.)
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-menu-button {
+  float: right;
+  cursor: pointer;
+}
+
+.vjs-default-skin .vjs-menu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0em; /* (Width of vjs-menu - width of button) / 2 */
+  width: 0em;
+  height: 0em;
+  margin-bottom: 3em;
+
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
+
+  border-top: 1.55em solid rgb(0, 0, 0); /* Same top as ul bottom */
+  border-top-color: rgba(7, 40, 50, 0.5); /* Same as ul background */
+}
+
+/* Button Pop-up Menu */
+.vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content {
+  display: block;
+  padding: 0; margin: 0;
+  position: absolute;
+  width: 10em;
+  bottom: 1.5em; /* Same bottom as vjs-menu border-top */
+  max-height: 15em;
+  overflow: auto;
+
+  left: -5em; /* Width of menu - width of button / 2 */
+
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(7, 40, 50, 0.7);
+
+  -webkit-box-shadow: -20px -20px 0px rgba(255, 255, 255, 0.5);
+     -moz-box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
+          box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
+}
+
+/*.vjs-default-skin .vjs-menu-button:focus ul,*/ /* This is not needed because keyboard accessibility for the caption button is not handled with the focus any more. */
+.vjs-default-skin .vjs-menu-button:hover .vjs-menu {
+  display: block;
+}
+.vjs-default-skin .vjs-menu-button ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0.3em 0 0.3em 0;
+  line-height: 1.4em;
+  font-size: 1.2em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: lowercase;
+}
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected {
+  background-color: #000;
+}
+.vjs-default-skin .vjs-menu-button ul li:focus,
+.vjs-default-skin .vjs-menu-button ul li:hover,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:focus,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:hover {
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #111;
+  outline: 0;
+
+  -webkit-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+     -moz-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+          box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+}
+.vjs-default-skin .vjs-menu-button ul li.vjs-menu-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 2em;
+  padding: 0;
+  margin: 0 0 0.3em 0;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* Subtitles Button */
+.vjs-default-skin .vjs-subtitles-button:before { content: "\e00c"; }
+
+/* There's unfortunately no CC button in FontAwesome, so we need
+    to manually create one. Please +1 the fontawesome request.
+    https://github.com/FortAwesome/Font-Awesome/issues/968 */
+.vjs-default-skin .vjs-captions-button {
+  font-size: 1em; /* Font icons are 1.5em */
+}
+.vjs-default-skin .vjs-captions-button:before {
+  content: "\e008";
+  font-family: VideoJS;
+  font-size: 1.5em;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-shadow: none;
+}
+
+
+/* Replacement for focus outline */
+.vjs-default-skin .vjs-captions-button:focus .vjs-control-content:before,
+.vjs-default-skin .vjs-captions-button:hover .vjs-control-content:before {
+  -webkit-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+     -moz-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+          box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+}
+
+
+.vjs-loading-spinner div {display:noneish

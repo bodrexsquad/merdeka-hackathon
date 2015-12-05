@@ -1,0 +1,15 @@
+
+<div class="container">
+  <h1>
+    <%= @report.title %>
+    <small>Reported on <%= @report.created_at.strftime('%a, %e %b %Y') %></small>
+  </h1>
+  
+  <hr>
+  
+  <p>
+    <%= @report.description %>
+  </p>
+  
+  
+</div>

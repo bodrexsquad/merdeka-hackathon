@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  entity_id: 1
+  locations: MyString
+  reason: MyText
+  date_of_incident: 2015-12-05
+  cost: 1.5
+  title: MyString
+  description: MyText
+
+two:
+  entity_id: 1
+  locations: MyString
+  reason: MyText
+  date_of_incident: 2015-12-05
+  cost: 1.5
+  title: MyString
+  description: MyText
