@@ -29,3 +29,4 @@ gem 'bootstrap-generators', '~> 3.3.4'
 gem "select2-rails"
 gem 'bootstrap-typeahead-rails'
 gem 'bootstrap-datepicker-rails'
+gem 'chart-js-rails'

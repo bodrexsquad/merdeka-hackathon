@@ -17,6 +17,5 @@
 //= require select2
 //= require bootstrap-typeahead-rails
 //= require bootstrap-datepicker
+//= require Chart
 //= require_tree .
-
-

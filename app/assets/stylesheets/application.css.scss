@@ -17,6 +17,7 @@
  *= require_tree .
  *= require_self
  */
+ 
 
 .section{width:100%;clear:both;padding:0;margin:0}
 .section.landing{padding-top:7%;padding-bottom:7%}
@@ -32,6 +33,8 @@
 .landing-call-to-action-btn#get-started:hover,.landing-call-to-action-btn#cta:hover{background-color:#EA0008}
 .hero-container{text-align:center;width:100%;height:100%;margin:0 auto;padding-top:5%;padding-bottom:5%;padding-left:0}.hero-subheader{position:relative;z-index:6;width:auto;margin-top:0;margin-bottom:5%;font-family:Bitter,serif;color:#fff;font-size:2em;line-height:3em;font-weight:400;word-spacing:4px;letter-spacing:1px;text-align:center}
 .light-green-text{color:#72ff92;text-shadow:-1px 0 #2ecc71,0 1px #2ecc71,1px 0 #2ecc71,0 -1px #2ecc71;letter-spacing:2px}
+
+
 
 /*
  * How it works column
@@ -75,3 +78,19 @@
 .col.span_1_of_3.testimonial-card{width:30.33333%;margin:0 1.5% 0 1.5%}}h3.testimonials{font-size:2.4em;line-height:1.8em;font-weight:700;padding-top:10px;letter-spacing:2px;word-spacing:3px;width:80%;margin:0 auto}
 .testimonial-green-quote{width:10px;height:10px;margin-left:15px;margin-top:3px;float:left}.testimony-text{padding:5px 15px;#font-weight:600;#font-style:italic;float:left;margin-left:16px;margin-top:-14px;margin-bottom:20px}
 .testimonial-offer-label{color:#606060;float:right;clear:right;margin-top:9px;margin-bottom:9px;font-weight:400;font-size:13px;width:100%;text-align:center}
+
+body {
+ 
+ font-family: 'Open Sans', sans-serif;
+
+}
+
+nav {
+ font-size:1em; margin:0px; 
+ font-family: 'Andale Mono', monospace; 
+ font-weight:normal; 
+ font-style:normal; 
+ font-color:BLACK;
+ -webkit-font-smoothing: antialiased;
+}
+

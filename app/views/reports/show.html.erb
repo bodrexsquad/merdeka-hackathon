@@ -5,6 +5,15 @@
     <small>Reported on <%= @report.created_at.strftime('%a, %e %b %Y') %></small>
   </h1>
   
+  
+  <hr>
+  
+  <p>
+    On the <b><%= @report.date_of_incident.strftime('%a, %e %b %Y') %></b> in <b><%= @report.locations %></b>, I had to pay <b>$<%= @report.cost %> IDR</b> to <b>$<%= @report.entity %></b> because <b><%= @report.reason %></b>.
+  </p>
+  
+  
+  
   <hr>
   
   <p>

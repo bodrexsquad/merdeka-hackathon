@@ -58,6 +58,8 @@ GEM
       railties (>= 3.0)
     builder (3.2.2)
     byebug (8.2.1)
+    chart-js-rails (0.0.9)
+      railties (> 3.1)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -193,6 +195,7 @@ DEPENDENCIES
   bootstrap-sass
   bootstrap-typeahead-rails
   byebug
+  chart-js-rails
   coffee-rails (~> 4.1.0)
   high_voltage
   hub

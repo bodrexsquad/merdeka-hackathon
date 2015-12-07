@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
                       
     reset_session
     session[:user_id] = user.id
-    redirect_to user_path(user), :notice => 'Signed in!'
+    redirect_to '/pages/about', :notice => 'Signed in!'
   end
 
   def destroy

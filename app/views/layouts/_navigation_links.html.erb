@@ -1,2 +1,11 @@
 <%# add navigation links to this file %>
-<li><%= link_to 'Reports', reports_path %></li>
+<style>
+    a {
+        color:black;
+    }
+</style>
+
+<li><%= link_to ' | <i class="fa fa-home"></i> Home  |'.html_safe, '/pages/about' %></li>
+<li><%= link_to ' <i class="fa fa-pencil"></i> Submit Report |'.html_safe, new_report_path %></li>
+<li><%= link_to ' <i class="fa fa-eye"></i> View Reports |'.html_safe, reports_path %></li>
+<li><%= link_to ' <i class="fa fa-question"></i> FAQ  |'.html_safe, '/pages/faq' %></li>

@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :edit, :destroy]
+  # before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_report, only: [:show, :edit, :update, :destroy]
   after_action :update_known_entities, only: [:create, :update]
   
@@ -32,6 +32,7 @@ class ReportsController < ApplicationController
 
     respond_to do |format|
       if @report.save
+        User.publish_to_all("#{@report.fb_summary} #nokorupsi #merdeka", "https://merdeka-hack-khanh2907.c9users.io")
         format.html { redirect_to @report, notice: 'Report was successfully created.' }
         format.json { render :show, status: :created, location: @report }
       else
