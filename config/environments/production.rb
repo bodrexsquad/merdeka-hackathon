@@ -76,4 +76,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Connecting to postgresql
+  db = URI.parse(ENV['postgres://iqwljiwwoqdysd:qzGRGgasKi_sMysSP4dcabR8Km@ec2-54-83-61-45.compute-1.amazonaws.com:5432/dde6roet07bko1'] || 'postgres://localhost/mydb')
+
+  ActiveRecord::Base.establish_connection(
+    :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+    :host     => db.host,
+    :username => db.user,
+    :password => db.password,
+    :database => db.path[1..-1],
+    :encoding => 'utf8'
+  )
+
+
 end
