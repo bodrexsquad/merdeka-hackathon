@@ -1,5 +1,7 @@
-Merdeka Hack
-================
+Merdeka Sydney Hackathon (http://nokorupsi.herokuapp.com)
+==========================================================
+We came up with the idea of #nokorupsi, a crowdsourced corruption reporting website with social sharing capabilities for the hackathon organised by Freelancer, which focused on using technology to solve the problem of corruption in Indonesia. We won $400 worth of JB Hi-Fi vouchers.
+
 
 This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
 provided by the [RailsApps Project](http://railsapps.github.io/).
